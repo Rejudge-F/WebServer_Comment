@@ -11,10 +11,10 @@
 
 #include "noncopyable.h"
 #include "MutexLock.h"
-#include <pthread.h>
+#include <pthread.h>            // for pthread_cond_
 #include <errno.h>
 #include <cstdint>
-#include <time.h>
+#include <time.h>               // for timespec 
 
 class Condition: noncopyable {
 public:
