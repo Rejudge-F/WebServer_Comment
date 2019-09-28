@@ -3,7 +3,7 @@
 	> Author: zhangfeng
 	> Mail: brave_zephyr@163.com
 	> Created Time: Thu 26 Sep 2019 04:04:45 PM CST
-	> Target: 
+	> Target: 定义当前线程的相关信息，使用 __thread 关键字，保证每个Thread互不影响
  ************************************************************************/
 
 #ifndef _CURRENTTHREAD_H

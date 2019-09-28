@@ -3,7 +3,7 @@
 	> Author: zhangfeng
 	> Mail: brave_zephyr@163.com
 	> Created Time: Thu 26 Sep 2019 03:51:47 PM CST
-	> Target: 
+	> Target: 定义Thread类，包含Thread的基本状态，以及实现开始和挂起函数 
  ************************************************************************/
 
 #ifndef _THREAD_H

@@ -3,7 +3,7 @@
 	> Author: zhangfeng
 	> Mail: brave_zephyr@163.com
 	> Created Time: Thu 26 Sep 2019 04:30:08 PM CST
-	> Target: 
+	> Target: 实现Thread类的启动，挂起，以及通过ThreadData保存CurrentThread的相关数据 
  ************************************************************************/
 
 #include "Thread.h"

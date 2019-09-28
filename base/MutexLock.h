@@ -42,12 +42,12 @@ private:
     friend class Condition;
 };
 
-class MutexGuard: noncopyable {
+class MutexLockGuard: noncopyable {
 public: 
-    explicit MutexGuard(MutexLock &_mutex): mutex(_mutex) {
+    explicit MutexLockGuard(MutexLock &_mutex): mutex(_mutex) {
         mutex.lock();
     }
-    ~MutexGuard() {
+    ~MutexLockGuard() {
         mutex.unlock();
     }
 private:
