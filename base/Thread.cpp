@@ -24,7 +24,7 @@ namespace CurrentThread {
     __thread int         t_cacheTid = 0;
     __thread char        t_tidString[32];
     __thread int         t_tidStringLength = 6; // tid length = 5 
-    __thread const char* t_thread_Name = "default";
+    __thread const char* t_threadName = "default";
 }
 
 
@@ -59,8 +59,8 @@ struct ThreadData {
         latch_->countDown();
         latch_ = nullptr;
 
-        CurrentThread::t_thread_Name = name_.empty() ? "Thread" : name_.c_str();
-        prctl(PR_SET_NAME, CurrentThread::t_thread_Name);
+        CurrentThread::t_threadName = name_.empty() ? "Thread" : name_.c_str();
+        prctl(PR_SET_NAME, CurrentThread::t_threadName);
         
         func_();
         CurrentThread::t_threadName = "finished";
