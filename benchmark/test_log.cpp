@@ -13,10 +13,11 @@ using namespace std;
 
 const int lines = 100000;
 
+Logger logger(__FILE__, __LINE__);
 
 void threadFunc() {
     for(int i = 0; i < lines; i++) {
-        LOG << i;
+        logger.stream() << "safasfdsfsafaf";
     }
 }
 
