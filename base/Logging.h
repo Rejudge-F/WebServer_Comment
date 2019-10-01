@@ -40,7 +40,7 @@ private:
     static std::string logFileName_;
 };
 
-#define LOG Logger(__FILE__, __LINE__).stream();
+#define LOG Logger(__FILE__, __LINE__).stream()
 
 #define _LOGGING_H
 #endif

@@ -17,7 +17,7 @@
 using namespace std;
 
 AppendFile::AppendFile(string filename)
-: fp_(fopen(filename.c_str(), "ae"))
+: fp_(fopen(filename.c_str(), "at+"))
 {
     setbuffer(fp_, buffer_, sizeof buffer_);
 }

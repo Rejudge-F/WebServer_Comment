@@ -51,6 +51,9 @@ void AsyncLogging::threadFunc() {
     assert(running_ == true);
     latch_.countDown();
     LogFile output(basename_);
+#ifdef DEBUG
+    printf("logFileName: %s\n", basename_.c_str());
+#endif
     BufferPtr newBuffer1(new Buffer);
     BufferPtr newBuffer2(new Buffer);
     newBuffer1->bzero();

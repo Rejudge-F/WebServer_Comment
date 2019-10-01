@@ -13,20 +13,22 @@ using namespace std;
 
 const int lines = 100000;
 
-Logger logger(__FILE__, __LINE__);
 
 void threadFunc() {
     for(int i = 0; i < lines; i++) {
-        logger.stream() << "safasfdsfsafaf";
+        LOG  << i;
     }
 }
 
 void testSingleThread() {
+    shared_ptr<Thread> thread(new Thread(threadFunc, "single_test"));
+    thread->start();
 }
 
 int main() {
     threadFunc();
-    cout << __FILE__ << " " << __LINE__ << endl;
+    sleep(3);
     return 0;
 }
+
 
