@@ -37,7 +37,6 @@ void LogFile::flush() {
 }
 
 void LogFile::append_unlocked(const char* logline, const size_t len) {
-    MutexLockGuard lockGuard(*mutex_);
     file_->append(logline, len);
     count_++;
     if(count_ >= flushEveryN_) {
