@@ -3,7 +3,7 @@
 	> Author: zhangfeng
 	> Mail: brave_zephyr@163.com
 	> Created Time: Sun 29 Sep 2019 07:53:19 PM CST
-	> Target: 
+	> Target: 对外接口，通过Impl来格式化日志，使用LogStream来写入缓冲区 
  ************************************************************************/
 
 #ifndef _LOGGING_H

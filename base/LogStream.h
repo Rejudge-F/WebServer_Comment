@@ -3,7 +3,7 @@
 	> Author: zhangfeng
 	> Mail: brave_zephyr@163.com
 	> Created Time: Sun 29 Sep 2019 09:00:20 AM CST
-	> Target: 
+	> Target: 实现一个FixBuffer类来灵活控制buffer，然后通过LogStream类来重载<<实现各种类型的输入 
  ************************************************************************/
 
 #ifndef _LOGSTREAM_H

@@ -3,7 +3,7 @@
 	> Author: zhangfeng
 	> Mail: brave_zephyr@163.com
 	> Created Time: Sun 29 Sep 2019 09:25:29 AM CST
-	> Target: 
+	> Target: 各种重载函数的实现以及字符串转数字函数的实现 
  ************************************************************************/
 
 #include "LogStream.h"

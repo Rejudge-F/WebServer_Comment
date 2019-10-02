@@ -3,7 +3,7 @@
 	> Author: zhangfeng
 	> Mail: brave_zephyr@163.com
 	> Created Time: Sun 29 Sep 2019 08:02:50 PM CST
-	> Target: 
+	> Target: 通过建立一个AsyncLogging来实现对日志的append，将stream中的数据通过AsyncLogging来append到文件中 
  ************************************************************************/
 
 #include "Logging.h"
@@ -45,15 +45,17 @@ void Logger::Impl::formatTime() {
     gettimeofday(&tv, nullptr);
     time = tv.tv_sec;
     struct tm *p_time = localtime(&time);
-    strftime(str_t, 26, "%Y-%m-%d %H:%M:%S\n", p_time);
+    strftime(str_t, 26, "%Y-%m-%d %H:%M:%S ", p_time);
     stream_ << str_t;
 }
 
 Logger::Logger(const char *fileName, int line) 
-: impl_(fileName, line) {}
+: impl_(fileName, line) {
+    impl_.stream_ << impl_.basename_ << ":" << impl_.line_ << ": ";
+}
 
 Logger::~Logger(){
-    impl_.stream_ << "--" << impl_.basename_ << ":" << impl_.line_ << "\n";
+    impl_.stream_ << "\n";
     const LogStream::Buffer& buf(stream().buffer());
     output(buf.data(), buf.length());
 }

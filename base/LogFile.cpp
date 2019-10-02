@@ -3,7 +3,7 @@
 	> Author: zhangfeng
 	> Mail: brave_zephyr@163.com
 	> Created Time: Sat 28 Sep 2019 11:02:55 AM CST
-	> Target: 
+	> Target: 对FileUtil的进一步封装，主要还是为apped和flush操作 
  ************************************************************************/
 
 #include "LogFile.h"

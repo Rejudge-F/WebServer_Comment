@@ -3,7 +3,7 @@
 	> Author: zhangfeng
 	> Mail: brave_zephyr@163.com
 	> Created Time: Sun 29 Sep 2019 08:26:10 PM CST
-	> Target: 
+	> Target: 实现一个日志类，启动一个线程来写日志 
  ************************************************************************/
 
 #ifndef _ASYNCLOGGING_H

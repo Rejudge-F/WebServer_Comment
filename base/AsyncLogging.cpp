@@ -3,7 +3,7 @@
 	> Author: zhangfeng
 	> Mail: brave_zephyr@163.com
 	> Created Time: Sun 29 Sep 2019 08:35:48 PM CST
-	> Target: 
+	> Target: 实现类，完成双缓冲异步日志，主要完成，在缓冲区满或者定时flush缓冲区内容到文件 
  ************************************************************************/
 
 #include "AsyncLogging.h"
