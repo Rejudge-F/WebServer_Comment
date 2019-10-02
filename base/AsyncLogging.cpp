@@ -39,6 +39,7 @@ void AsyncLogging::append(const char *logline, int len) {
         currentBuffer_.reset();
         if(nextBuffer_) {
             currentBuffer_ = std::move(nextBuffer_);
+            nextBuffer_.reset();
         } else {
             currentBuffer_.reset(new Buffer);
         }
