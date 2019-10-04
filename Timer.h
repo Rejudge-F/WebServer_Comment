@@ -9,7 +9,6 @@
 #ifndef _TIMER_H
 #define _TIMER_H
 
-#include "HttpData.h"
 #include "base/noncopyable.h"
 #include "base/MutexLock.h"
 #include <unistd.h>
@@ -39,15 +38,19 @@ private:
 
 struct TimerCmp {
     bool operator()(std::shared_ptr<TimerNode> &first, std::shared_ptr<TimerNode> &second) const {
-        return first->getExpTime() > b->getExpTime();
+        return first->getExpTime() > second->getExpTime();
     }
 };
 
 class TimerManager {
 public:
+    TimerManager();
+    ~TimerManager();
+    void addTimer(std::shared_ptr<HttpData> SPHttpData, int timeout);
+    void handleExpiredEvent();
 private:
     typedef std::shared_ptr<TimerNode> SPTimerNode;
     std::priority_queue<SPTimerNode, std::deque<SPTimerNode>, TimerCmp> timerNodeQueue;
-}
+};
 
 #endif
