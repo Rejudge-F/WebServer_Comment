@@ -32,15 +32,15 @@ TimerNode::~TimerNode() {
 
 void TimerNode::update(int timeout) {
     struct timeval now;
-    now = gettimeofday(&now, nullptr);
+    gettimeofday(&now, nullptr);
     expiredTime_ = (((now.tv_sec % 10000) * 1000) + (now.tv_usec / 1000)) + timeout;
 }
 
 bool TimerNode::isValid() {
     struct timeval now;
     gettimeofday(&now, nullptr);
-    size_t diff = (((now % 10000) * 1000) + (now.tv_usec / 1000));
-    if(temp < expiredTime_) {
+    size_t diff = (((now.tv_sec % 10000) * 1000) + (now.tv_usec / 1000));
+    if(diff < expiredTime_) {
         return true;
     } else {
         this->setDeleted();
@@ -48,7 +48,7 @@ bool TimerNode::isValid() {
     }
 }
 
-TimerNode::clearReq() {
+void TimerNode::clearReq() {
     SPHttpData.reset();
     this->setDeleted();
 }
