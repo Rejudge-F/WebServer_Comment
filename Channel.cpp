@@ -7,7 +7,6 @@
  ************************************************************************/
 
 #include "Channel.h"
-#include "Util.h"
 #include <unistd.h>
 #include <queue>
 #include <cstdio>

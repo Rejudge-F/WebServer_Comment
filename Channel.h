@@ -8,7 +8,6 @@
 
 #ifndef _CHANNEL_H
 #define _CHANNEL_H
-#include "Timer.h"
 #include <string>
 #include <unordered_map>
 #include <memory>
@@ -87,7 +86,7 @@ public:
     }
 
     bool EqualAndUpdateLastEvents() {
-        bool res = false;
+        bool res = (lastEvents_ == events_); 
         lastEvents_ = events_;
         return res;
     }
