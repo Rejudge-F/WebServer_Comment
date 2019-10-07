@@ -11,6 +11,7 @@
 
 #include "base/noncopyable.h"
 #include "base/MutexLock.h"
+#include "HttpData.h"
 #include <unistd.h>
 #include <memory>
 #include <queue>

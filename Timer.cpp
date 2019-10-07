@@ -7,7 +7,6 @@
  ************************************************************************/
 
 #include "Timer.h"
-#include "HttpData.h"
 #include <sys/time.h>
 #include <unistd.h>
 #include <queue>
