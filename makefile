@@ -14,21 +14,21 @@ MAIN_TARGET:=./bin/WebServer
 SUB_TARGET:=./bin/test_log 
 
 #	rule for Target 
-all:$(SUB_TARGET) 
+all:$(SUB_TARGET) $(MAIN_TARGET)  
 $(SUB_TARGET):$(OBJECTS) ./test/test_log.o 
-	$(CC) $(CCFLAGS) $^ $(CCLINK) -o $@
+	$(CC) $(CCFLAGS) -o $@ $^ $(CCLINK)
 
 %.o:%.cpp 
-	$(CC) $(CCFLAGS) -c  -o $@ $<
+	$(CC) $(CCFLAGS) -c -o $@ $<
 
-MAIN_TARGET:time $(OBJECTS) Main.o
-	$(CC) $(CCFLAGS) $(CCLINK) -o $@ $^ 
+$(MAIN_TARGET):$(OBJECTS) Main.o
+	$(CC) $(CCFLAGS) -o $@ $^ $(CCLINK) 
 
 Main.o: Main.cpp 
-	$(CC) $(CCFLAGS) -c $(CCLINK) -o $@ $^
+	$(CC) $(CCFLAGS) -c -o $@ $^
 
 .PHONY:
 clean:
-	rm $(OBJECTS) $(all)
+	rm $(OBJECTS) $(all) Main.o *.log log/* bin/* core*
 time:
 	date
