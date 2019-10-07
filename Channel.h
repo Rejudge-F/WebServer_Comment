@@ -116,4 +116,5 @@ private:
     CallBack connHandler_;
 };
 
+typedef std::shared_ptr<Channel> SP_Channel;
 #endif
