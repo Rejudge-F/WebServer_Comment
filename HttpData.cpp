@@ -166,7 +166,7 @@ void HttpData::handleRead() {
     do {
         bool zero = false;
         int read_num = readn(fd_, inBuffer_, zero);
-        LOG << "Request: " << inBuffer_;
+        LOG << "\nRequest: \n" << inBuffer_;
         if(connectionState_ == H_DISCONNECTING) {
             inBuffer_.clear();
             break;
@@ -175,6 +175,7 @@ void HttpData::handleRead() {
         if(read_num < 0) {
             perror("handleRead: 1");
             error_ = true;
+            LOG << "400 ERROR!";
             handleError(fd_, 400, "Bad Request");
             break;
         } else if(zero) {
@@ -194,6 +195,7 @@ void HttpData::handleRead() {
 
                 inBuffer_.clear();
                 error_ = true;
+                LOG << "400 ERROR!";
                 handleError(fd_, 400, "Bad Request");
                 break;
             } else {
@@ -211,6 +213,7 @@ void HttpData::handleRead() {
                 LOG << "FD: " << fd_ << ", " << inBuffer_;
 
                 inBuffer_.clear();
+                LOG << "400 ERROR!";
                 handleError(fd_, 400, "Bad Request");
                 break;
             } 
@@ -227,6 +230,7 @@ void HttpData::handleRead() {
                 content_length = stoi(headers_["Content-length"]);
             } else {
                 error_ = true;
+                LOG << "400 ERROR";
                 handleError(fd_, 400, "Bad Request: lost of Content-length");
                 if(static_cast<int>(inBuffer_.size()) < content_length) {
                     break;
@@ -497,7 +501,7 @@ AnalysisState HttpData::analysisRequest() {
         } else {
             filetype = MimeType::getMime(fileName_.substr(dot_pos));
         }
-        
+       
         // test File 
         if(fileName_ == "hello") {
             outBuffer_ = "HTTP/1.1 200 OK\r\nContent-type: text/plain\r\n\r\nHello World";
@@ -519,6 +523,7 @@ AnalysisState HttpData::analysisRequest() {
         struct stat sbuf;
         if(stat(fileName_.c_str(), &sbuf) < 0) {
             header.clear();
+            LOG << "400 ERROR!";
             handleError(fd_, 404, "NOT FOUND!");
             return ANALYSIS_ERROR;
         }
@@ -535,6 +540,7 @@ AnalysisState HttpData::analysisRequest() {
         int src_fd = open(fileName_.c_str(), O_RDONLY, 0);
         if(src_fd < 0) {
             outBuffer_.clear();
+            LOG << "400 ERROR!";
             handleError(fd_, 404, "NOT FOUND!");
             return ANALYSIS_SUCCESS;
         }
@@ -543,6 +549,7 @@ AnalysisState HttpData::analysisRequest() {
         if(mmapRet == (void *)(-1)) {
             munmap(mmapRet, sbuf.st_size);
             outBuffer_.clear();
+            LOG << "400 ERROR!";
             handleError(fd_, 404, "NOT FOUND!");
             return ANALYSIS_ERROR;
         }
@@ -561,7 +568,7 @@ void HttpData::handleError(int fd, int err_num, std::string short_msg) {
     body_buff += "<html><title>QAQ ERROR!</title>";
     body_buff += "<body bgcolor=\"ffffff\">";
     body_buff += std::to_string(err_num) + short_msg;
-    body_buff += "<hr><em> Zephyr Web </em>\n</body></html>";
+    body_buff += "<hr><em> Zephyr's Web </em>\n</body></html>";
 
     header_buff += "HTTP/1.1 " + std::to_string(err_num) + short_msg + "\r\n";
     header_buff += "Content-Type: text/html\r\n";
