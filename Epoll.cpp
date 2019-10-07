@@ -66,7 +66,7 @@ void Epoll::epoll_mod(SP_Channel request, int timeout) {
         struct epoll_event event;
         event.data.fd = fd;
         event.events = request->getEvents();
-        if(epoll_ctl(epollFd_, EPOLL_CTL_ADD, fd, &event) < 0) {
+        if(epoll_ctl(epollFd_, EPOLL_CTL_MOD, fd, &event) < 0) {
             perror("epoll_mod error");
             LOG << "epoll_mod error";
             fd2chan_[fd].reset();
