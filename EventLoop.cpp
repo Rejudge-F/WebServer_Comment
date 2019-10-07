@@ -97,6 +97,9 @@ void EventLoop::loop() {
     while(!quit_) {
         ret.clear();
         ret = poller_->poll();
+        eventHandling_ = true;
+        for(auto &it : ret) 
+             it->handleEvents();
         eventHandling_ = false;
         doPendingFunctors();
         poller_->handleExpired();

@@ -14,7 +14,7 @@ EventLoopThreadPool::EventLoopThreadPool(EventLoop *baseloop, int numThreads) :
     numThreads_(numThreads),
     next_(0)
 {
-    if(numThreads_ < 0) {
+    if(numThreads_ <= 0) {
         LOG << "numThreads_ <= 0";
         abort();
     }
