@@ -76,6 +76,7 @@ ssize_t readn(int fd, std::string &inBuffer) {
             } else if(errno == EAGAIN) {
                 return readSum;
             } else {
+                perror("read error");
                 return -1;
             }
         } else if(nread == 0) {
@@ -122,7 +123,7 @@ ssize_t writen(int fd, std::string &sbuff) {
                 if(errno == EINTR) {
                     nwritten = 0;
                 } else if(errno == EAGAIN) {
-                    return writeSum;
+                    break;
                 } else {
                     return -1;
                 }
@@ -132,6 +133,10 @@ ssize_t writen(int fd, std::string &sbuff) {
         nleft -= nwritten;
         ptr += nwritten;
     }
+    if(writeSum == static_cast<int>(sbuff.size())) 
+        sbuff.clear();
+    else 
+        sbuff = sbuff.substr(writeSum);
     return writeSum;
 }
 
@@ -187,6 +192,7 @@ int socket_bind_listen(int port) {
     }
 
     struct sockaddr_in server_addr;
+    bzero((char*)&server_addr, sizeof server_addr);
     server_addr.sin_family = AF_INET;
     server_addr.sin_addr.s_addr = htonl(INADDR_ANY);
     server_addr.sin_port = htons((unsigned short)port);
