@@ -17,6 +17,7 @@
 #include <sys/mman.h>
 #include <iostream>
 #include <string>
+using namespace std;
 
 pthread_once_t MimeType::once_control = PTHREAD_ONCE_INIT;
 std::unordered_map<std::string, std::string> MimeType::mime;
@@ -149,7 +150,9 @@ void HttpData::reset() {
     hState_ = H_START;
     headers_.clear();
     if(timer_.lock()) {
-        seperateTimer();
+        shared_ptr<TimerNode> my_timer(timer_.lock());
+        my_timer->clearReq();
+        timer_.reset();
     }
 }
 
@@ -175,7 +178,6 @@ void HttpData::handleRead() {
         if(read_num < 0) {
             perror("handleRead: 1");
             error_ = true;
-            LOG << "400 ERROR!";
             handleError(fd_, 400, "Bad Request");
             break;
         } else if(zero) {
@@ -191,11 +193,8 @@ void HttpData::handleRead() {
                 break;
             } else if(flag == PARSE_URI_ERROR) {
                 perror("handleRead: 2");
-                LOG << "FD: " << fd_ << ", " << inBuffer_;
-
                 inBuffer_.clear();
                 error_ = true;
-                LOG << "400 ERROR!";
                 handleError(fd_, 400, "Bad Request");
                 break;
             } else {
@@ -210,10 +209,6 @@ void HttpData::handleRead() {
             } else if(flag == PARSE_HEADER_ERROR) {
                 perror("handleRead: 3");
                 error_ = true;
-                LOG << "FD: " << fd_ << ", " << inBuffer_;
-
-                inBuffer_.clear();
-                LOG << "400 ERROR!";
                 handleError(fd_, 400, "Bad Request");
                 break;
             } 
@@ -230,13 +225,12 @@ void HttpData::handleRead() {
                 content_length = stoi(headers_["Content-length"]);
             } else {
                 error_ = true;
-                LOG << "400 ERROR";
                 handleError(fd_, 400, "Bad Request: lost of Content-length");
-                if(static_cast<int>(inBuffer_.size()) < content_length) {
-                    break;
-                }
-                state_ = STATE_ANALYSIS;
+                break;
             }
+            if(static_cast<int>(inBuffer_.size()) < content_length) 
+                break;
+            state_ = STATE_ANALYSIS;
         }
 
         if(state_ == STATE_ANALYSIS) {
@@ -302,7 +296,7 @@ void HttpData::handleConn() {
             loop_->updatePoller(channel_, timeout);
         } else {
             events_ |= (EPOLLIN | EPOLLET);
-            int timeout = DEFAULT_KEEP_ALIVE_TIME >> 1;
+            int timeout = (DEFAULT_KEEP_ALIVE_TIME >> 1);
             loop_->updatePoller(channel_, timeout);
         }
     } else if(!error_ && connectionState_ == H_DISCONNECTING && (events_ & EPOLLOUT)) {
@@ -448,6 +442,7 @@ HeaderState HttpData::parseHeaders() {
                 } else {
                     return PARSE_HEADER_ERROR;
                 }
+                break;
             }
             case H_LF: {
                 if(str[i] == '\r') {
@@ -487,6 +482,7 @@ AnalysisState HttpData::analysisRequest() {
 
     } else if(method_ == METHOD_GET || method_ == METHOD_HEAD) {
         std::string header;
+        header += "HTTP/1.1 200 OK\r\n";
         if(headers_.find("Connection") != headers_.end()
           && (headers_["Connection"] == "Keep-Alive" || 
               headers_["Connection"] == "keep-alive")) {
@@ -523,13 +519,12 @@ AnalysisState HttpData::analysisRequest() {
         struct stat sbuf;
         if(stat(fileName_.c_str(), &sbuf) < 0) {
             header.clear();
-            LOG << "400 ERROR!";
             handleError(fd_, 404, "NOT FOUND!");
             return ANALYSIS_ERROR;
         }
         header += "Content-type: " + filetype + "\r\n";
         header += "Content-length: " + std::to_string(sbuf.st_size) + "\r\n";
-        header += "Server: Zephyr Web";
+        header += "Server: Zephyr Webi\r\n";
         header += "\r\n";
 
         outBuffer_ += header;
@@ -540,16 +535,14 @@ AnalysisState HttpData::analysisRequest() {
         int src_fd = open(fileName_.c_str(), O_RDONLY, 0);
         if(src_fd < 0) {
             outBuffer_.clear();
-            LOG << "400 ERROR!";
             handleError(fd_, 404, "NOT FOUND!");
-            return ANALYSIS_SUCCESS;
+            return ANALYSIS_ERROR;
         }
         void *mmapRet = mmap(nullptr, sbuf.st_size, PROT_READ, MAP_PRIVATE, src_fd, 0);
         close(src_fd);
         if(mmapRet == (void *)(-1)) {
             munmap(mmapRet, sbuf.st_size);
             outBuffer_.clear();
-            LOG << "400 ERROR!";
             handleError(fd_, 404, "NOT FOUND!");
             return ANALYSIS_ERROR;
         }
