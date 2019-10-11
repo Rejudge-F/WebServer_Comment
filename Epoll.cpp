@@ -52,7 +52,6 @@ void Epoll::epoll_add(SP_Channel request, int timeout) {
     fd2chan_[fd] = request;
     if(epoll_ctl(epollFd_, EPOLL_CTL_ADD, fd, &event) < 0) {
         perror("epoll_add failed");
-        LOG << "epoll_add failed";
         fd2chan_[fd].reset();
     }
 }
@@ -68,7 +67,6 @@ void Epoll::epoll_mod(SP_Channel request, int timeout) {
         event.events = request->getEvents();
         if(epoll_ctl(epollFd_, EPOLL_CTL_MOD, fd, &event) < 0) {
             perror("epoll_mod error");
-            LOG << "epoll_mod error";
             fd2chan_[fd].reset();
         }
     }
@@ -82,7 +80,6 @@ void Epoll::epoll_del(SP_Channel request) {
 
     if(epoll_ctl(epollFd_, EPOLL_CTL_DEL, fd, &event) < 0) {
         perror("epoll_del error");
-        LOG << "epoll_del error";
     }
     fd2chan_[fd].reset();
     fd2http_[fd].reset();
@@ -92,7 +89,6 @@ std::vector<SP_Channel> Epoll::poll() {
     while(true) {
         int event_count = epoll_wait(epollFd_, &*events_.begin(), events_.size(), EPOLLWAIT_TIME);
         if(event_count < 0) {
-            LOG << "epoll wait error";
             perror("epoll wait error");
         }
         std::vector<SP_Channel> req_data = getEventsRequest(event_count);
