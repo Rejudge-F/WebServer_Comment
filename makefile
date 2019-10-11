@@ -29,6 +29,6 @@ Main.o: Main.cpp
 
 .PHONY:
 clean:
-	rm $(OBJECTS) $(all) Main.o *.log log/* bin/* core*
+	rm $(OBJECTS) $(all) Main.o *.log log/* bin/* core* -rf
 time:
 	date
