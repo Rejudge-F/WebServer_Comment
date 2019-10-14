@@ -1,0 +1,8 @@
+threadNum: 4, port: 7777, logPath: ./WebServer.log
+handleRead: 3: Resource temporarily unavailable
+handleRead: 3: Resource temporarily unavailable
+handleRead: 3: Resource temporarily unavailable
+handleRead: 3: Resource temporarily unavailable
+handleRead: 3: Resource temporarily unavailable
+handleRead: 3: Resource temporarily unavailable
+handleRead: 3: Resource temporarily unavailable

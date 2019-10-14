@@ -1,0 +1,1251 @@
+2019-10-14 18:37:19 Server.cpp:50: Connect: 180.168.126.117:63321
+2019-10-14 18:37:19 HttpData.cpp:172: 
+Request: 
+GET /index.html HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:37:19 Server.cpp:50: Connect: 180.168.126.117:63322
+2019-10-14 18:37:19 HttpData.cpp:172: 
+Request: 
+GET /shared/sp/css/common.css HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: text/css,*/*;q=0.1
+Referer: http://47.107.54.187:7777/index.html
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:37:19 HttpData.cpp:172: 
+Request: 
+GET /css/mikutap.css HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: text/css,*/*;q=0.1
+Referer: http://47.107.54.187:7777/index.html
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:37:19 HttpData.cpp:172: 
+Request: 
+GET /shared/js/common-2.min.js HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: */*
+Referer: http://47.107.54.187:7777/index.html
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:37:19 Server.cpp:50: Connect: 180.168.126.117:63325
+2019-10-14 18:37:19 HttpData.cpp:172: 
+Request: 
+GET /js/mikutap.min.js HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: */*
+Referer: http://47.107.54.187:7777/index.html
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:37:19 Server.cpp:50: Connect: 180.168.126.117:63324
+2019-10-14 18:37:19 HttpData.cpp:172: 
+Request: 
+GET /favicon.ico HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://47.107.54.187:7777/index.html
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:37:20 HttpData.cpp:172: 
+Request: 
+GET /index.html HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:37:20 HttpData.cpp:172: 
+Request: 
+
+2019-10-14 18:37:20 HttpData.cpp:172: 
+Request: 
+GET /shared/sp/css/common.css HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: text/css,*/*;q=0.1
+Referer: http://47.107.54.187:7777/index.html
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:37:20 HttpData.cpp:172: 
+Request: 
+GET /css/mikutap.css HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: text/css,*/*;q=0.1
+Referer: http://47.107.54.187:7777/index.html
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:37:20 HttpData.cpp:172: 
+Request: 
+GET /shared/js/common-2.min.js HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: */*
+Referer: http://47.107.54.187:7777/index.html
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:37:20 Server.cpp:50: Connect: 180.168.126.117:63328
+2019-10-14 18:37:20 HttpData.cpp:172: 
+Request: 
+GET /js/mikutap.min.js HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: */*
+Referer: http://47.107.54.187:7777/index.html
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:37:21 HttpData.cpp:172: 
+Request: 
+GET /favicon.ico HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://47.107.54.187:7777/index.html
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:39:26 HttpData.cpp:172: 
+Request: 
+
+2019-10-14 18:42:51 Server.cpp:50: Connect: 180.168.126.117:63865
+2019-10-14 18:42:51 HttpData.cpp:172: 
+Request: 
+GET / HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:42:51 Server.cpp:50: Connect: 180.168.126.117:63866
+2019-10-14 18:42:51 HttpData.cpp:172: 
+Request: 
+GET /shared/sp/css/common.css HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: text/css,*/*;q=0.1
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:42:51 HttpData.cpp:172: 
+Request: 
+GET /css/mikutap.css HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: text/css,*/*;q=0.1
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:42:51 HttpData.cpp:172: 
+Request: 
+GET /shared/js/common-2.min.js HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: */*
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:42:51 HttpData.cpp:172: 
+Request: 
+GET /js/mikutap.min.js HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: */*
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:42:51 Server.cpp:50: Connect: 180.168.126.117:63870
+2019-10-14 18:42:51 Server.cpp:50: Connect: 180.168.126.117:63871
+2019-10-14 18:42:52 HttpData.cpp:172: 
+Request: 
+GET /favicon.ico HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:43:10 HttpData.cpp:172: 
+Request: 
+
+2019-10-14 18:43:10 HttpData.cpp:172: 
+Request: 
+
+2019-10-14 18:46:45 HttpData.cpp:172: 
+Request: 
+GET /WebServer.log HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:46:45 HttpData.cpp:172: 
+Request: 
+
+2019-10-14 18:46:45 HttpData.cpp:172: 
+Request: 
+GET /favicon.ico HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://47.107.54.187:7777/WebServer.log
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:46:48 Server.cpp:50: Connect: 180.168.126.117:64244
+2019-10-14 18:46:48 HttpData.cpp:172: 
+Request: 
+GET / HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:46:48 HttpData.cpp:172: 
+Request: 
+
+2019-10-14 18:46:48 HttpData.cpp:172: 
+Request: 
+GET /shared/sp/css/common.css HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: text/css,*/*;q=0.1
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:46:48 Server.cpp:50: Connect: 180.168.126.117:64245
+2019-10-14 18:46:48 HttpData.cpp:172: 
+Request: 
+GET /css/mikutap.css HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: text/css,*/*;q=0.1
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:46:48 HttpData.cpp:172: 
+Request: 
+GET /shared/js/common-2.min.js HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: */*
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:46:48 Server.cpp:50: Connect: 180.168.126.117:64246
+2019-10-14 18:46:48 HttpData.cpp:172: 
+Request: 
+GET /js/mikutap.min.js HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: */*
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:46:48 Server.cpp:50: Connect: 180.168.126.117:64247
+2019-10-14 18:46:48 HttpData.cpp:172: 
+Request: 
+GET /favicon.ico HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:49:58 HttpData.cpp:172: 
+Request: 
+
+2019-10-14 18:51:53 Server.cpp:50: Connect: 180.168.126.117:64655
+2019-10-14 18:51:53 HttpData.cpp:173: 
+Request: 
+GET /WebServer.log HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:51:53 Server.cpp:50: Connect: 180.168.126.117:64654
+2019-10-14 18:51:53 HttpData.cpp:173: 
+Request: 
+GET /favicon.ico HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://47.107.54.187:7777/WebServer.log
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:51:54 HttpData.cpp:173: 
+Request: 
+GET / HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:51:54 HttpData.cpp:173: 
+Request: 
+
+2019-10-14 18:51:54 HttpData.cpp:173: 
+Request: 
+GET /shared/sp/css/common.css HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: text/css,*/*;q=0.1
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:51:54 Server.cpp:50: Connect: 180.168.126.117:64661
+2019-10-14 18:51:54 HttpData.cpp:173: 
+Request: 
+GET /css/mikutap.css HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: text/css,*/*;q=0.1
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:51:54 Server.cpp:50: Connect: 180.168.126.117:64660
+2019-10-14 18:51:54 Server.cpp:50: Connect: 180.168.126.117:64659
+2019-10-14 18:51:54 HttpData.cpp:173: 
+Request: 
+GET /js/mikutap.min.js HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: */*
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:51:54 HttpData.cpp:173: 
+Request: 
+GET /shared/js/common-2.min.js HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: */*
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:51:55 HttpData.cpp:173: 
+Request: 
+GET /favicon.ico HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:51:58 HttpData.cpp:173: 
+Request: 
+GET /data/track/track.json HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Accept: application/json, text/javascript, */*; q=0.01
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:51:59 HttpData.cpp:173: 
+Request: 
+GET /data/main/main.json HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Accept: application/json, text/javascript, */*; q=0.01
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:52:29 Server.cpp:50: Connect: 112.224.5.250:62824
+2019-10-14 18:52:29 HttpData.cpp:173: 
+Request: 
+GET / HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Linux; Android 9; EML-AL00 Build/HUAWEIEML-AL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/044904 Mobile Safari/537.36 V1_AND_SQ_7.1.0_0_TIM_D TIM/2.3.1.1834 QQ/6.5.5  NetType/4G WebP/0.3.0 Pixel/1080
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,image/tpg,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh-CN;q=0.9,en-CN;q=0.8,en-US;q=0.7
+
+
+2019-10-14 18:52:38 Server.cpp:50: Connect: 112.224.5.250:62826
+2019-10-14 18:52:38 HttpData.cpp:173: 
+Request: 
+GET / HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Linux; Android 9; EML-AL00 Build/HUAWEIEML-AL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/044904 Mobile Safari/537.36 V1_AND_SQ_7.1.0_0_TIM_D TIM/2.3.1.1834 QQ/6.5.5  NetType/4G WebP/0.3.0 Pixel/1080
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,image/tpg,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,en-CN;q=0.9,en-US;q=0.8
+
+
+2019-10-14 18:52:39 Server.cpp:50: Connect: 112.224.5.250:62825
+2019-10-14 18:53:03 HttpData.cpp:173: 
+Request: 
+GET / HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Linux; Android 9; EML-AL00 Build/HUAWEIEML-AL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/044904 Mobile Safari/537.36 V1_AND_SQ_7.1.0_0_TIM_D TIM/2.3.1.1834 QQ/6.5.5  NetType/4G WebP/0.3.0 Pixel/1080
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,image/tpg,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,en-CN;q=0.9,en-US;q=0.8
+
+
+2019-10-14 18:53:06 Server.cpp:50: Connect: 222.73.192.51:49584
+2019-10-14 18:53:06 HttpData.cpp:173: 
+Request: 
+GET / HTTP/1.1
+Host: 47.107.54.187:7777
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+qzhw-wnshtml-webviewsupport: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+qzhw-request-key: BB8D7903-0B8A-4DDF-BDCE-012F949B2628
+User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 12_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 QQ/8.1.5.461 V1_IPH_SQ_8.1.5_1_APP_A Pixel/1242 Core/WKWebView Device/Apple(iPhone XS Max) NetType/WIFI QBWebViewType/1 WKType/1
+webso-cache-load-time: 1571050386706
+Accept-Language: zh-cn
+Accept-Encoding: gzip, deflate
+
+
+2019-10-14 18:53:06 HttpData.cpp:173: 
+Request: 
+GET /shared/sp/css/common.css HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Accept: text/css,*/*;q=0.1
+User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 12_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 QQ/8.1.5.461 V1_IPH_SQ_8.1.5_1_APP_A Pixel/1242 Core/WKWebView Device/Apple(iPhone XS Max) NetType/WIFI QBWebViewType/1 WKType/1
+Accept-Language: zh-cn
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+
+
+2019-10-14 18:53:06 Server.cpp:50: Connect: 222.73.192.51:49585
+2019-10-14 18:53:06 HttpData.cpp:173: 
+Request: 
+GET /css/mikutap.css HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Accept: text/css,*/*;q=0.1
+User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 12_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 QQ/8.1.5.461 V1_IPH_SQ_8.1.5_1_APP_A Pixel/1242 Core/WKWebView Device/Apple(iPhone XS Max) NetType/WIFI QBWebViewType/1 WKType/1
+Accept-Language: zh-cn
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+
+
+2019-10-14 18:53:06 Server.cpp:50: Connect: 222.73.192.51:49586
+2019-10-14 18:53:06 HttpData.cpp:173: 
+Request: 
+GET /shared/js/common-2.min.js HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 12_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 QQ/8.1.5.461 V1_IPH_SQ_8.1.5_1_APP_A Pixel/1242 Core/WKWebView Device/Apple(iPhone XS Max) NetType/WIFI QBWebViewType/1 WKType/1
+Accept-Language: zh-cn
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+
+
+2019-10-14 18:53:06 Server.cpp:50: Connect: 222.73.192.51:49587
+2019-10-14 18:53:06 HttpData.cpp:173: 
+Request: 
+GET /js/mikutap.min.js HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 12_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 QQ/8.1.5.461 V1_IPH_SQ_8.1.5_1_APP_A Pixel/1242 Core/WKWebView Device/Apple(iPhone XS Max) NetType/WIFI QBWebViewType/1 WKType/1
+Accept-Language: zh-cn
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+
+
+2019-10-14 18:53:07 Server.cpp:50: Connect: 112.224.5.250:62827
+2019-10-14 18:53:07 HttpData.cpp:173: 
+Request: 
+GET / HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Linux; Android 9; EML-AL00 Build/HUAWEIEML-AL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/044904 Mobile Safari/537.36 V1_AND_SQ_7.1.0_0_TIM_D TIM/2.3.1.1834 QQ/6.5.5  NetType/4G WebP/0.3.0 Pixel/1080
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,image/tpg,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,en-CN;q=0.9,en-US;q=0.8
+
+
+2019-10-14 18:53:08 Server.cpp:50: Connect: 61.129.6.227:34526
+2019-10-14 18:53:08 HttpData.cpp:173: 
+Request: 
+GET / HTTP/1.1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; InfoPath.3; rv:11.0) like Gecko
+Accept: */*
+Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.4
+Host: 47.107.54.187:7777
+Connection: keep-alive
+
+
+2019-10-14 18:53:10 HttpData.cpp:173: 
+Request: 
+GET /shared/js/common-2.min.js HTTP/1.1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; InfoPath.3; rv:11.0) like Gecko
+Accept: */*
+Referer: http://47.107.54.187:7777/
+Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.4
+Host: 47.107.54.187:7777
+Connection: keep-alive
+
+
+2019-10-14 18:53:10 HttpData.cpp:173: 
+Request: 
+GET /js/mikutap.min.js HTTP/1.1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36
+Accept: */*
+Referer: http://47.107.54.187:7777/
+Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.4
+Host: 47.107.54.187:7777
+Connection: keep-alive
+
+
+2019-10-14 18:53:13 Server.cpp:50: Connect: 112.224.5.250:62828
+2019-10-14 18:53:13 HttpData.cpp:173: 
+Request: 
+GET / HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Linux; Android 9; EML-AL00 Build/HUAWEIEML-AL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.36
+normal: true
+fling_code_key: 220534019
+preact_time: 1571050390791
+fling_action_key: 2
+leftviewtext: 返回
+preact: QQBrowserActivity
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-Hans-CN,en-CN;q=0.8,en-US;q=0.6
+
+
+2019-10-14 18:53:13 Server.cpp:50: Connect: 112.224.5.250:62829
+2019-10-14 18:53:13 Server.cpp:50: Connect: 112.224.5.250:62830
+2019-10-14 18:53:13 HttpData.cpp:173: 
+Request: 
+GET /shared/sp/css/common.css HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Linux; Android 9; EML-AL00 Build/HUAWEIEML-AL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.36
+Accept: text/css,*/*;q=0.1
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-Hans-CN,en-CN;q=0.8,en-US;q=0.6
+
+
+2019-10-14 18:53:13 HttpData.cpp:173: 
+Request: 
+GET /css/mikutap.css HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Linux; Android 9; EML-AL00 Build/HUAWEIEML-AL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.36
+Accept: text/css,*/*;q=0.1
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-Hans-CN,en-CN;q=0.8,en-US;q=0.6
+
+
+2019-10-14 18:53:13 HttpData.cpp:173: 
+Request: 
+GET /shared/js/common-2.min.js HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Linux; Android 9; EML-AL00 Build/HUAWEIEML-AL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.36
+Accept: */*
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-Hans-CN,en-CN;q=0.8,en-US;q=0.6
+
+
+2019-10-14 18:53:14 Server.cpp:50: Connect: 112.224.5.250:62831
+2019-10-14 18:53:14 HttpData.cpp:173: 
+Request: 
+GET /js/mikutap.min.js HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Linux; Android 9; EML-AL00 Build/HUAWEIEML-AL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.36
+Accept: */*
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-Hans-CN,en-CN;q=0.8,en-US;q=0.6
+
+
+2019-10-14 18:53:15 HttpData.cpp:173: 
+Request: 
+GET /favicon.ico HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Linux; Android 9; EML-AL00 Build/HUAWEIEML-AL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.36
+Accept: image/webp,image/*,*/*;q=0.8
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-Hans-CN,en-CN;q=0.8,en-US;q=0.6
+Cookie: bt=on
+
+
+2019-10-14 18:53:17 HttpData.cpp:173: 
+Request: 
+GET /data/track/track.json HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Accept: application/json, text/javascript, */*; q=0.01
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Linux; Android 9; EML-AL00 Build/HUAWEIEML-AL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.36
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-Hans-CN,en-CN;q=0.8,en-US;q=0.6
+Cookie: bt=on
+
+
+2019-10-14 18:53:18 HttpData.cpp:173: 
+Request: 
+GET /data/main/main.json HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Accept: application/json, text/javascript, */*; q=0.01
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Linux; Android 9; EML-AL00 Build/HUAWEIEML-AL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.36
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-Hans-CN,en-CN;q=0.8,en-US;q=0.6
+Cookie: bt=on
+
+
+2019-10-14 18:53:29 HttpData.cpp:173: 
+Request: 
+
+2019-10-14 18:53:42 Server.cpp:50: Connect: 222.73.192.51:49595
+2019-10-14 18:53:42 HttpData.cpp:173: 
+Request: 
+GET /data/track/track.json HTTP/1.1
+Host: 47.107.54.187:7777
+Accept-Encoding: gzip, deflate
+Cookie: bt=on
+Connection: keep-alive
+Accept: application/json, text/javascript, */*; q=0.01
+User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 12_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 QQ/8.1.5.461 V1_IPH_SQ_8.1.5_1_APP_A Pixel/1242 Core/WKWebView Device/Apple(iPhone XS Max) NetType/WIFI QBWebViewType/1 WKType/1
+Referer: http://47.107.54.187:7777/
+Accept-Language: zh-cn
+X-Requested-With: XMLHttpRequest
+
+
+2019-10-14 18:53:44 HttpData.cpp:173: 
+Request: 
+GET /data/main/main.json HTTP/1.1
+Host: 47.107.54.187:7777
+Accept-Encoding: gzip, deflate
+Cookie: bt=on
+Connection: keep-alive
+Accept: application/json, text/javascript, */*; q=0.01
+User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 12_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 QQ/8.1.5.461 V1_IPH_SQ_8.1.5_1_APP_A Pixel/1242 Core/WKWebView Device/Apple(iPhone XS Max) NetType/WIFI QBWebViewType/1 WKType/1
+Referer: http://47.107.54.187:7777/
+Accept-Language: zh-cn
+X-Requested-With: XMLHttpRequest
+
+
+2019-10-14 18:54:45 Server.cpp:50: Connect: 180.168.126.117:64733
+2019-10-14 18:54:45 HttpData.cpp:173: 
+Request: 
+GET / HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:54:45 Server.cpp:50: Connect: 180.168.126.117:64734
+2019-10-14 18:54:45 HttpData.cpp:173: 
+Request: 
+GET /shared/sp/css/common.css HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: text/css,*/*;q=0.1
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:54:45 HttpData.cpp:173: 
+Request: 
+GET /css/mikutap.css HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: text/css,*/*;q=0.1
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:54:45 HttpData.cpp:173: 
+Request: 
+GET /shared/js/common-2.min.js HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: */*
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:54:45 Server.cpp:50: Connect: 180.168.126.117:64737
+2019-10-14 18:54:45 HttpData.cpp:173: 
+Request: 
+GET /js/mikutap.min.js HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: */*
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:54:45 Server.cpp:50: Connect: 180.168.126.117:64738
+2019-10-14 18:54:45 HttpData.cpp:173: 
+Request: 
+GET /favicon.ico HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:54:47 HttpData.cpp:173: 
+Request: 
+GET /data/track/track.json HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Accept: application/json, text/javascript, */*; q=0.01
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:54:47 HttpData.cpp:173: 
+Request: 
+GET /data/main/main.json HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Accept: application/json, text/javascript, */*; q=0.01
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:54:52 HttpData.cpp:173: 
+Request: 
+
+2019-10-14 18:57:54 Server.cpp:50: Connect: 112.8.128.36:2414
+2019-10-14 18:57:54 HttpData.cpp:173: 
+Request: 
+GET /?nsukey=S3KCsHGu5hezlXIcsIAJjDVEtoajQYF1IoB0WSu39pz2PDs84vCTiJMfyIkBpH2hPHyj%2FILGwzx0KB841xtVPXGKbOX3n0YdjHrAC5CdX8G3SZ%2Fdetgx17Zn5hmYnnkxK8SrL%2Bz1i1gbGtaQuX5IXdUOOea6ccQzBpPjXmQ5oUgThRS5lY2UGHOWkojsKgyV2xQWMDMs3DGl%2FQa3Dx2dtA%3D%3D HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Linux; Android 8.0.0; FLA-AL10 Build/HUAWEIFLA-AL10; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/044904 Mobile Safari/537.36 MMWEBID/3082 MicroMessenger/7.0.7.1521(0x27000735) Process/tools NetType/WIFI Language/zh_CN
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,image/wxpic,image/sharpp,image/apng,image/tpg,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,en-US;q=0.9
+
+
+2019-10-14 18:57:54 Server.cpp:50: Connect: 112.8.128.36:2417
+2019-10-14 18:57:54 HttpData.cpp:173: 
+Request: 
+GET /favicon.ico HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Linux; Android 8.0.0; FLA-AL10 Build/HUAWEIFLA-AL10; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/044904 Mobile Safari/537.36 MMWEBID/3082 MicroMessenger/7.0.7.1521(0x27000735) Process/tools NetType/WIFI Language/zh_CN
+Accept: image/webp,image/wxpic,image/sharpp,image/apng,image/tpg,image/*,*/*;q=0.8
+Referer: http://47.107.54.187:7777/?nsukey=S3KCsHGu5hezlXIcsIAJjDVEtoajQYF1IoB0WSu39pz2PDs84vCTiJMfyIkBpH2hPHyj%2FILGwzx0KB841xtVPXGKbOX3n0YdjHrAC5CdX8G3SZ%2Fdetgx17Zn5hmYnnkxK8SrL%2Bz1i1gbGtaQuX5IXdUOOea6ccQzBpPjXmQ5oUgThRS5lY2UGHOWkojsKgyV2xQWMDMs3DGl%2FQa3Dx2dtA%3D%3D
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,en-US;q=0.9
+
+
+2019-10-14 18:58:05 Server.cpp:50: Connect: 222.73.192.52:45022
+2019-10-14 18:58:05 HttpData.cpp:173: 
+Request: 
+GET /?nsukey=%2FIhbzWS8pgCES95G0ERqGYda2kuNXxB0vVXkWWT%2Bjm0OpIe7vIlD6sgYLoOjUs4iCsZ7L5RdowRPLUXk%2BcFqB5SrsNVSV3ISgzYyKcI5AorYZEcAKGsxoZpBY7e%2B0pOCjoDHnqEYMQaBdkVoGq6Z1pjNjttPcgG7FHx5hTlxj60qr2hAPvmEUYwfjsrePnhO2DyEqq%2FMUT6uRcj38KpOMA%3D%3D HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Linux; Android 9; Redmi Note 5 Build/PKQ1.180904.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/044904 Mobile Safari/537.36 MMWEBID/2134 MicroMessenger/7.0.6.1460(0x27000634) Process/tools NetType/WIFI Language/zh_CN
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,image/wxpic,image/sharpp,image/apng,image/tpg,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,en-US;q=0.9
+
+
+2019-10-14 18:58:05 Server.cpp:50: Connect: 222.73.192.52:45024
+2019-10-14 18:58:05 HttpData.cpp:173: 
+Request: 
+GET /favicon.ico HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Linux; Android 9; Redmi Note 5 Build/PKQ1.180904.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/044904 Mobile Safari/537.36 MMWEBID/2134 MicroMessenger/7.0.6.1460(0x27000634) Process/tools NetType/WIFI Language/zh_CN
+Accept: image/webp,image/wxpic,image/sharpp,image/apng,image/tpg,image/*,*/*;q=0.8
+Referer: http://47.107.54.187:7777/?nsukey=%2FIhbzWS8pgCES95G0ERqGYda2kuNXxB0vVXkWWT%2Bjm0OpIe7vIlD6sgYLoOjUs4iCsZ7L5RdowRPLUXk%2BcFqB5SrsNVSV3ISgzYyKcI5AorYZEcAKGsxoZpBY7e%2B0pOCjoDHnqEYMQaBdkVoGq6Z1pjNjttPcgG7FHx5hTlxj60qr2hAPvmEUYwfjsrePnhO2DyEqq%2FMUT6uRcj38KpOMA%3D%3D
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,en-US;q=0.9
+
+
+2019-10-14 18:58:16 Server.cpp:50: Connect: 222.73.192.52:45030
+2019-10-14 18:58:16 HttpData.cpp:173: 
+Request: 
+GET /?nsukey=A9u%2FSVw06SAxd6kVSzbHqcqYn8sNSGrojsi6OihmcbBgun9PfGi3ggiX3Dz6sQlRIDZMwMZrigPTzS%2FTBmoZRNo8%2FDRfrpCVlkJo6xIHYbnY%2FPBW%2FwyDWpOw0tNzlMu%2BiRTQ9Zq9qZcgdQihkWOkQk8TCzGI4IKndvQkQnYh0%2B19dyt7qivRvxJ9MVto3wkgDcxdVn2zIWT0Y0llTz2zqw%3D%3D HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Linux; Android 9; Redmi Note 5 Build/PKQ1.180904.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/044904 Mobile Safari/537.36 MMWEBID/2134 MicroMessenger/7.0.6.1460(0x27000634) Process/tools NetType/WIFI Language/zh_CN
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,image/wxpic,image/sharpp,image/apng,image/tpg,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,en-US;q=0.9
+
+
+2019-10-14 18:58:16 Server.cpp:50: Connect: 222.73.192.52:45032
+2019-10-14 18:58:16 HttpData.cpp:173: 
+Request: 
+GET /favicon.ico HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Linux; Android 9; Redmi Note 5 Build/PKQ1.180904.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/044904 Mobile Safari/537.36 MMWEBID/2134 MicroMessenger/7.0.6.1460(0x27000634) Process/tools NetType/WIFI Language/zh_CN
+Accept: image/webp,image/wxpic,image/sharpp,image/apng,image/tpg,image/*,*/*;q=0.8
+Referer: http://47.107.54.187:7777/?nsukey=A9u%2FSVw06SAxd6kVSzbHqcqYn8sNSGrojsi6OihmcbBgun9PfGi3ggiX3Dz6sQlRIDZMwMZrigPTzS%2FTBmoZRNo8%2FDRfrpCVlkJo6xIHYbnY%2FPBW%2FwyDWpOw0tNzlMu%2BiRTQ9Zq9qZcgdQihkWOkQk8TCzGI4IKndvQkQnYh0%2B19dyt7qivRvxJ9MVto3wkgDcxdVn2zIWT0Y0llTz2zqw%3D%3D
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,en-US;q=0.9
+
+
+2019-10-14 18:58:22 Server.cpp:50: Connect: 106.39.189.91:62024
+2019-10-14 18:58:22 HttpData.cpp:173: 
+Request: 
+GET /?nsukey=A9u%2FSVw06SAxd6kVSzbHqcqYn8sNSGrojsi6OihmcbBgun9PfGi3ggiX3Dz6sQlRIDZMwMZrigPTzS%2FTBmoZRNo8%2FDRfrpCVlkJo6xIHYbnY%2FPBW%2FwyDWpOw0tNzlMu%2BiRTQ9Zq9qZcgdQihkWOkQk8TCzGI4IKndvQkQnYh0%2B19dyt7qivRvxJ9MVto3wkgDcxdVn2zIWT0Y0llTz2zqw%3D%3D HTTP/1.1
+Upgrade-Insecure-Requests: 1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,en-US;q=0.8
+X-UCBrowser-UA: dv(HTC 802t);pr(UCBrowser/10.2.0.535);ov(Android 5.0.2);ss(360*640);pi(1080*1920);bt(UC);pm(1);bv(1);nm(0);im(0);sr(0);nt(2);
+User-Agent: Mozilla/5.0 (Linux; U; Android 9; zh-CN; Redmi Note 5 Build/PKQ1.180904.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.108 Quark/3.4.3.116 Mobile Safari/537.36
+clientip: 222.73.192.52
+X-Forwarded-For: 222.73.192.52
+Host: 47.107.54.187:7777
+Cache-Control: max-age=0
+Connection: keep-alive
+
+
+2019-10-14 18:58:22 Server.cpp:50: Connect: 222.73.192.52:45076
+2019-10-14 18:58:22 HttpData.cpp:173: 
+Request: 
+GET /favicon.ico HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Linux; U; Android 9; zh-CN; Redmi Note 5 Build/PKQ1.180904.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.108 Quark/3.4.3.116 Mobile Safari/537.36
+Accept: image/webp,image/*,*/*;q=0.8
+Referer: http://47.107.54.187:7777/?nsukey=A9u%2FSVw06SAxd6kVSzbHqcqYn8sNSGrojsi6OihmcbBgun9PfGi3ggiX3Dz6sQlRIDZMwMZrigPTzS%2FTBmoZRNo8%2FDRfrpCVlkJo6xIHYbnY%2FPBW%2FwyDWpOw0tNzlMu%2BiRTQ9Zq9qZcgdQihkWOkQk8TCzGI4IKndvQkQnYh0%2B19dyt7qivRvxJ9MVto3wkgDcxdVn2zIWT0Y0llTz2zqw%3D%3D
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,en-US;q=0.8
+
+
+2019-10-14 18:59:14 HttpData.cpp:173: 
+Request: 
+GET / HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:59:14 HttpData.cpp:173: 
+Request: 
+GET /shared/sp/css/common.css HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: text/css,*/*;q=0.1
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:59:14 HttpData.cpp:173: 
+Request: 
+GET /css/mikutap.css HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: text/css,*/*;q=0.1
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:59:14 HttpData.cpp:173: 
+Request: 
+GET /shared/js/common-2.min.js HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: */*
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:59:14 HttpData.cpp:173: 
+Request: 
+GET /js/mikutap.min.js HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: */*
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 18:59:14 Server.cpp:50: Connect: 180.168.126.117:64878
+2019-10-14 18:59:14 Server.cpp:50: Connect: 180.168.126.117:64877
+2019-10-14 18:59:15 HttpData.cpp:173: 
+Request: 
+GET /favicon.ico HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 19:00:03 HttpData.cpp:173: 
+Request: 
+
+2019-10-14 19:00:03 HttpData.cpp:173: 
+Request: 
+
+2019-10-14 19:01:30 HttpData.cpp:173: 
+Request: 
+GET / HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 19:01:30 HttpData.cpp:173: 
+Request: 
+
+2019-10-14 19:01:30 HttpData.cpp:173: 
+Request: 
+GET /shared/sp/css/common.css HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: text/css,*/*;q=0.1
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 19:01:30 Server.cpp:50: Connect: 180.168.126.117:64964
+2019-10-14 19:01:30 Server.cpp:50: Connect: 180.168.126.117:64965
+2019-10-14 19:01:30 HttpData.cpp:173: 
+Request: 
+GET /shared/js/common-2.min.js HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: */*
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 19:01:30 Server.cpp:50: Connect: 180.168.126.117:64966
+2019-10-14 19:01:30 HttpData.cpp:173: 
+Request: 
+GET /js/mikutap.min.js HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: */*
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 19:01:30 HttpData.cpp:173: 
+Request: 
+GET /css/mikutap.css HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: text/css,*/*;q=0.1
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
+2019-10-14 19:01:31 HttpData.cpp:173: 
+Request: 
+GET /favicon.ico HTTP/1.1
+Host: 47.107.54.187:7777
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://47.107.54.187:7777/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: bt=on
+
+
