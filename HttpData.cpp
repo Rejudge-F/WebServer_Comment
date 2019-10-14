@@ -102,6 +102,7 @@ char favicon[555] = {
 void MimeType::init() {
     mime["default"] = "text/html";
     mime[".html"]   = "text/html";
+    mime[".css"]    = "text/css";
     mime[".txt"]    = "text/plain";
     mime[".c"]      = "text/plain";
     mime[".bmp"]    = "image/bmp";
