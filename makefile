@@ -1,6 +1,6 @@
 #	g++ paramenter
 CC=g++
-CCFLAGS=-std=c++11 -g -Wall -O3 -D_PTHREADS
+CCFLAGS=-std=c++11 -g -Wall -O3 -D_PTHREADS -finput-charset=UTF-8 -fexec-charset=UTF-8
 CCLINK=-lpthread
 
 #	Source and Objects 
