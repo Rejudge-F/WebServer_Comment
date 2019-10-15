@@ -1,9 +1,9 @@
 # WebServer-C++
 
-[![github](https://badgen.net/badge/OS/ubuntu/orange)](https://github.com/Rejudge-f)
-[![github](https://badgen.net/badge/g++/5.4/green)](https://github.com/Rejudge-f)
-[![github](https://badgen.net/badge/build/passing/green)](https://github.com/Rejudge-f)
-[![github](https://badgen.net/badge/license/passing/green)](https://github.com/Rejudge-f)
+[![github](https://badgen.net/badge/OS/ubuntu/orange)](https://cn.ubuntu.com/download)
+[![github](https://badgen.net/badge/g++/5.4/green)](https://packages.ubuntu.com/xenial/g++-5)
+[![github](https://badgen.net/badge/build/passing/green)](#)
+[![github](https://badgen.net/badge/license/MIT/green)](#)
 
 
 本项目基于[linyacool](https://github.com/linyacool/WebServer)
