@@ -3,7 +3,7 @@
 	> Author: zhangfeng
 	> Mail: brave_zephyr@163.com
 	> Created Time: Fri 04 Oct 2019 12:19:40 PM CST
-	> Target: 
+	> Target: 负责一个文件描述符的IO事件,有IO事件的类都会与一个Channel进行一个关联 
  ************************************************************************/
 
 #ifndef _CHANNEL_H
@@ -26,10 +26,10 @@ private:
     __uint32_t revents_;
     __uint32_t lastEvents_;
 
-    std::weak_ptr<HttpData> holder_;
+    std::weak_ptr<HttpData> holder_;  // Channel的持有者
 
 public:
-    Channel(EventLoop *loop);
+    Channel(EventLoop *loop); 
     Channel(EventLoop *loop, int fd);
     ~Channel();
     int getFd();
@@ -62,6 +62,7 @@ public:
     void handleError(int fd, int err_num, std::string short_msg);
     void handleConn();
 
+    // 处理事件,如果有读不到或者HUP认为对端关闭 
     void handleEvents() {
         events_ = 0;
         if((revents_ & EPOLLHUP) && !(revents_ & EPOLLIN)) {
@@ -107,9 +108,9 @@ public:
 
 
 private:
-    int parse_URI();
-    int parse_Headers();
-    int analysisRequest();
+    int parse_URI();        // 处理请求行
+    int parse_Headers();    // 处理请求头
+    int analysisRequest();  // 分析请求
 
     CallBack readHandler_;
     CallBack writeHandler_;
