@@ -3,7 +3,6 @@
 	> Author: zhangfeng
 	> Mail: brave_zephyr@163.com
 	> Created Time: Wed 02 Oct 2019 03:47:54 PM CST
-	> Target: 
  ************************************************************************/
 
 #include "Util.h"
