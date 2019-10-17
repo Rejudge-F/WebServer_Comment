@@ -5,7 +5,7 @@
 [![github](https://badgen.net/badge/OS/ubuntu/orange)](https://cn.ubuntu.com/download)
 [![github](https://badgen.net/badge/g++/5.4/green)](https://packages.ubuntu.com/xenial/g++-5)
 [![github](https://badgen.net/badge/build/passing/green)](#)
-[![github](https://badgen.net/badge/license/MIT/green)](#)
+[![github](https://badgen.net/badge/license/MIT/green)](https://github.com/Rejudge-F/WebServer_/blob/master/LICENSE)
 
 
 本项目基于[linyacool](https://github.com/linyacool/WebServer)
@@ -17,7 +17,19 @@
 - **注意：已下内容请结合代码食用**
 ---
 
+
 # 双缓冲异步日志的实现
+
+## 何为双缓冲异步日志
+
+连接：[双缓冲异步日志](https://blog.csdn.net/daaikuaichuan/article/details/86500108)
+
+## 该项目中如何实现的
+1. 基础类：noncopyable、MutexLock、Conditicon、CurrentThread、Thread
+2. 文件工具类：FileUtil、LogFile、LogStream
+3. 逻辑实现类：AsyncLogging
+4. 对外接口类：Logging
+
 ## 各个文件及其实现类
 
 ### noncopyable.h 
@@ -30,7 +42,7 @@ MutexLock.h以及MutexLock.cpp实现了MutexLock类以及MutexLockGuard类，Mut
 ### Condition.h
 Condition.h 封装了条件变量 pthread_cond_t 的基本操作，包括wait、timewait、signal以及broadcast，其中条件变量中的锁使用MutexLock，因此Condition类为MutexLock类的友元类
 
-### CountDownLatch.h
+### CountDownLatch.h & CountDownLatch.cpp
 首先我们了解一下什么是CountDownLatch：
 - CountDownLatch这个类使一个线程等待其他线程各自执行完毕后再执行。
 - 是通过一个计数器来实现的，计数器的初始值是线程的数量。每当一个线程执行完毕后，计数器的值就-1，当计数器的值为0时，表示所有线程都执行完毕，然后在闭锁上等待的线程就可以恢复工作了。
@@ -49,4 +61,56 @@ Thread 文件主要实现了线程类，具体实现，我们可以把类差分�
 **注意**
 - 记得使用latch来确保线程执行完毕，在去转线程状态为join
 - 在Thread类析构的时候如果任务还处于运行状态的话，把线程detach出去执行，确保任务完成
+
+### FileUtil.h & FileUtil.cpp
+FileUtil 文件实现了AppenFile类，实现底层对文件的打开，append和write操作，这里自己对文件描述符设置一个新的缓冲区buffer， 每次需要保证把所有的内容全部写入文件，需要处理一下
+
+### LogFile.h & LogFile.cpp
+LogFile 实现LogFile类，该类持有一个FileUtil实现的AppendFile，为了保证线程安全，还需要一个互斥锁，然后提供appendn次去flush一次，这个通过一个计数器实现，当counter到达flushEveryN的时候就会去触发flush操作，将内容刷入硬盘
+
+### AsyncLogging.h & AsyncLogging.cpp
+AsyncLogging 实现AsyncLogging类，是该双缓冲异步日志的关键类，他持有一个LogFile，以及几个缓冲区（这里用到多个缓冲区，但是目的和双缓冲是一样的)，另外，该类持有一个Thread来执行日志的写入操作，同样主要实现append和flush操作。
+
+**实现流程：**
+- 将append后的currentBuffer压入buffers中
+- 将buffersToWrite与buffers中的元素进行互换
+- 将bufferToWrite写入文件
+
+
+### LogStream.h & LogStream.cpp
+LogStream 实现了FixedBuffer类（可以理解为一个比较灵活的buffer，底层还是数组），然后LogStream类主要对<<运算符进行重载，通过格式化的方式写入buffer，此时通过LogStream写入的日志全部缓存到FixedBuffer中，当需要写入的时候需要需要通过Logger对外接口调用全部写入Buffer中，然后去调用AsyncLogging写入，这里初始话AsyncLogging使用了PTHREAD_ONCE_INIT属性。
+
+### Logging.h & Logging.cpp
+Logging 实现了Logger类以及对外的Impl接口类，接口内主要是对LogStream的描述，Logging.cpp中声明一个AsyncLogging对象，首先会将日志写入stream中，然后在logger类析构的时候将日志写入调用线程异步写入硬盘
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
