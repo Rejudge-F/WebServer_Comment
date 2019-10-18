@@ -107,6 +107,24 @@ LogStream 实现了FixedBuffer类（可以理解为一个比较灵活的buffer�
 Logging 实现了Logger类以及对外的Impl接口类，接口内主要是对LogStream的描述，Logging.cpp中声明一个AsyncLogging对象，首先会将日志写入stream中，然后在logger类析构的时候将日志写入调用线程异步写入硬盘
 
 
+# Reactor服务器的实现
+
+## 服务器简介
+整个服务器使用ET边缘触发模式，当有消息来临的时候全部读完，有消息需要写的话需要全部写完，对于每一个文件描述符需要一个Channel去处理IO事件，因此本项目中的所有文件描述符都会与一个Channel关联，每个文件描述符会设置Channel中的handle函数，通过这样的形式完成对一个文件描述符的IO，在整体上使用Reactor模式，整个程序拥有一个MainReactor，当有client来临的时候通过Round Robin的方法（在我看来像是轮流分配）分配一个subReactor去处理新的连接
+
+
+## 各个文件实现及描述
+
+### Util.h & Util.cpp
+这里面包含的读写函数是为了适应整个服务器在ET模式下读取文件描述符，读到不能在读（EAGAIN），写到不能在写（EAGAIN）的情况，同时包含了对文件描述符设置的一些函数，主要属性包括非阻塞、对SIGPIPE（对端关闭，本端收到的信号）的处理，TCP中Nodelay算法的禁用，TCP中LINGER的设置
+
+这里讲一下**linger属性**：我们知道在TCP断开连接的时候需要经历四次握手，在TIME_WAIT状态下等待时间时长为linger time，在`struct linger linger_;`这里面我们需要知道两个属性`l_onoff`和`l_linger`
+
+1. 如果l_onoff=0的话那么主动关闭的一方不会等待进行四次握手，丢弃缓存数据直接发送RST包，并结束自己的连接
+2. 如果l_onoff=1的话是需要进行四次握手的，那么既然需要四次握手就需要TIME_WAIT状态，那么TIME_WAIT等多久就会由l_linger来决定，如果l_linger=0的话那么就会按照默认的时间2MSL来进行，否则将会使用l_linger时间来作为等待的时间，等待的过程中这个连接的状态依然为TIME_WAIT
+
+
+
 
 
 
