@@ -142,7 +142,11 @@ Channel 文件主要实现了Channel类，任务为读写一个文件描述符�
 1. 带外数据：使用与普通数据不同的通道独立传送给用户，是相连的每一对流套接口间一个逻辑上独立的传输通道，通常TCP的URG紧急指针置位来完成。
 2. 整个类的模式为，通过handleEvents来先处理读写时间，然后对连接进行处理，该项目中每个含有读写事件的文件描述符都会关联一个Channel，而Channel中的holder也保存了他的持有者
 
+### Timer.h & Timer.cpp
 
+Timer 文件实现了 TimerNode 超时节点类以及 TimerManager 超时节点管理类，每一个Node携带超时时间点，以及RequestData，Manager使用优先队列维护所有的Node，当Node的超时时间点越小就会再优先队列的头部。
+
+Manager 因为是优先队列结构，所以不支持随机访问，如果有节点 delete 的时候并不会直接delete，最迟会在他的删除时间点因为超时删除，这样做的好处是不需要遍历队列去删除，以及如果相应的Request Data再次来临的时候不需要重新申请Node
 
 
 
