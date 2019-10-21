@@ -129,6 +129,18 @@ Logging 实现了Logger类以及对外的Impl接口类，接口内主要是对Lo
 1. 如果l_onoff=0的话那么主动关闭的一方不会等待进行四次握手，丢弃缓存数据直接发送RST包，并结束自己的连接
 2. 如果l_onoff=1的话是需要进行四次握手的，那么既然需要四次握手就需要TIME_WAIT状态，那么TIME_WAIT等多久就会由l_linger来决定，如果l_linger=0的话那么就会按照默认的时间2MSL来进行，否则将会使用l_linger时间来作为等待的时间，等待的过程中这个连接的状态依然为TIME_WAIT
 
+### Channel.h & Channel.cpp 
+Channel 文件主要实现了Channel类，任务为读写一个文件描述符，以及对数据进行URI，Header的拆分并分析。
+
+这里主要说明handleEvents：
+- （EPOLLHUP && !EPOLLIN）：认为对端关闭
+- （EPOLLERR）：文件描述符错误
+- （EPOLLIN | EPOLLRDHUP | EPOLLPRI）：文件描述符有数据可以读，分别为普通数据，带外数据，对端关闭
+- （EPOLLOUT）：有数据需要写入文件描述符
+
+**注意**：
+1. 带外数据：使用与普通数据不同的通道独立传送给用户，是相连的每一对流套接口间一个逻辑上独立的传输通道，通常TCP的URG紧急指针置位来完成。
+2. 整个类的模式为，通过handleEvents来先处理读写时间，然后对连接进行处理，该项目中每个含有读写事件的文件描述符都会关联一个Channel，而Channel中的holder也保存了他的持有者
 
 
 
