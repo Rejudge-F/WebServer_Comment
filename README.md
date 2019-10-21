@@ -148,7 +148,9 @@ Timer 文件实现了 TimerNode 超时节点类以及 TimerManager 超时节点�
 
 Manager 因为是优先队列结构，所以不支持随机访问，如果有节点 delete 的时候并不会直接delete，最迟会在他的删除时间点因为超时删除，这样做的好处是不需要遍历队列去删除，以及如果相应的Request Data再次来临的时候不需要重新申请Node
 
+### Epoll.h & Epoll.cpp
 
+Epoll 文件实现了单一的 Epoll 类，封装了对Epoll的基本del，mod，add方法，同时通过 poll 来收集事件到 events，将events传送到Channel中的Revents，然后交给Channel处理，该Epoll的基本单位是Channel，并且拥有一个超时管理器，Epoll类主要实现了反应堆服务器模型的基本操作以及对应事件的处理方式。
 
 
 
