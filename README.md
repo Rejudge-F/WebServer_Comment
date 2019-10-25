@@ -9,38 +9,6 @@
 
 
 本项目基于[linyacool](https://github.com/linyacool/WebServer)
-
-Table of Contents
-=================
-
-   * [WebServer-C  ](#webserver-c)
-   * [WebServer-C  ](#webserver-c-1)
-   * [Table of Contents](#table-of-contents)
-   * [项目简介](#项目简介)
-   * [双缓冲异步日志的实现](#双缓冲异步日志的实现)
-      * [何为双缓冲异步日志](#何为双缓冲异步日志)
-      * [该项目中如何实现的](#该项目中如何实现的)
-      * [各个文件及其实现类](#各个文件及其实现类)
-         * [noncopyable.h](#noncopyableh)
-         * [MutexLock.h](#mutexlockh)
-         * [Condition.h](#conditionh)
-         * [CountDownLatch.h &amp; CountDownLatch.cpp](#countdownlatchh--countdownlatchcpp)
-         * [CurrentThread.h](#currentthreadh)
-         * [Thread.h &amp; Thread.cpp](#threadh--threadcpp)
-         * [FileUtil.h &amp; FileUtil.cpp](#fileutilh--fileutilcpp)
-         * [LogFile.h &amp; LogFile.cpp](#logfileh--logfilecpp)
-         * [AsyncLogging.h &amp; AsyncLogging.cpp](#asyncloggingh--asyncloggingcpp)
-         * [LogStream.h &amp; LogStream.cpp](#logstreamh--logstreamcpp)
-         * [Logging.h &amp; Logging.cpp](#loggingh--loggingcpp)
-   * [Reactor服务器的实现](#reactor服务器的实现)
-      * [服务器简介](#服务器简介)
-      * [各个文件实现及描述](#各个文件实现及描述)
-         * [Util.h &amp; Util.cpp](#utilh--utilcpp)
-         * [Channel.h &amp; Channel.cpp](#channelh--channelcpp)
-         * [Timer.h &amp; Timer.cpp](#timerh--timercpp)
-         * [Epoll.h &amp; Epoll.cpp](#epollh--epollcpp)
-
-Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
          
 
 # 项目简介
@@ -156,10 +124,33 @@ Manager 因为是优先队列结构，所以不支持随机访问，如果有节
 
 Epoll 文件实现了单一的 Epoll 类，封装了对Epoll的基本del，mod，add方法，同时通过 poll 来收集事件到 events，将events传送到Channel中的Revents，然后交给Channel处理，该Epoll的基本单位是Channel，并且拥有一个超时管理器，Epoll类主要实现了反应堆服务器模型的基本操作以及对应事件的处理方式。
 
+### EventLoop.h & EventLoop.cpp
 
+引用原作者：One loop per thread意味着每个线程只能有一个EventLoop对象，EventLoop即是时间循环，每次从poller里拿活跃事件，并给到Channel里分发处理。EventLoop中的loop函数会在最底层(Thread)中被真正调用，开始无限的循环，直到某一轮的检查到退出状态后从底层一层一层的退出。
 
+### EventLoopThread.h & EventLoop.cpp
 
+EventLoopThread 用来开辟一个线程承载EventLoop，通过执行EventLoop中的loop函数来实现EventLoop的时间循环
 
+### EventLoopThreadPool.h & EventLoopThreadPool.cpp 
+
+EventLoopThreadPool 将EventLoopThread抽象化到上层逻辑，使用线程池来管理每一个EventloopThread
+
+### HttpData.h & HttpData.cpp 
+
+HttpData 在整个项目中代码量最多，大概的流程是持有一个fd和Channel然后将各种Handler函数给Channel，每个函数总结起来大致就是模拟了Http的数据解析，包括请求行，请求头，请求body的解析，最终交给Channel处理，其中定义了很多的枚举类型，这些枚举类型是解析Http的流程指引，一步一步解析，也就是当前解析的状态，看似复杂，实际上只是在模拟Http的解析过程
+
+### Sever.h & Server.cpp
+
+Server 属于本项目的上层逻辑类了，启动一个监听接口，然后通过handleConn来将新链接的Channel加入Channel中，进行处理
+
+### Main.cpp
+
+Main 主要为读取命令行参数，然后传递给Server类进行运行
+
+# 项目总结
+
+这个项目主要以Channel和EventLoop来运行，其他主要是上层封装，值得学习的是双缓冲日志的实现方式，以及一个项目如何从底层一层一层到上层逻辑的构建，能够体验到一个项目从底层到上层的开发过程，深刻体会一下EventLoop和Channel类，其次就是Http的处理过程，能够理解到Http的工作过程，能够提升自己对整个项目和Http的理解
 
 
 
