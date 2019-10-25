@@ -111,4 +111,75 @@ AsyncLogging 实现AsyncLogging类，是该双缓冲异步日志的关键类，�
 
 
 ### LogStream.h & LogStream.cpp
-LogStream 实现了FixedBuffer类（可以理解为一个比较灵活的buffer，底层还是数组），然后LogStream类主要对<<运算符进行重载，通过格式化的方式写入buffer，此时通过LogStream写入的日志全部缓存到FixedBuffer中，当需要写入的时候需要需要通过Logger对外接口调用全部写入Buffer中，然后
+LogStream 实现了FixedBuffer类（可以理解为一个比较灵活的buffer，底层还是数组），然后LogStream类主要对<<运算符进行重载，通过格式化的方式写入buffer，此时通过LogStream写入的日志全部缓存到FixedBuffer中，当需要写入的时候需要需要通过Logger对外接口调用全部写入Buffer中，然后去调用AsyncLogging写入，这里初始话AsyncLogging使用了PTHREAD_ONCE_INIT属性。
+
+### Logging.h & Logging.cpp
+Logging 实现了Logger类以及对外的Impl接口类，接口内主要是对LogStream的描述，Logging.cpp中声明一个AsyncLogging对象，首先会将日志写入stream中，然后在logger类析构的时候将日志写入调用线程异步写入硬盘
+
+
+# Reactor服务器的实现
+
+## 服务器简介
+整个服务器使用ET边缘触发模式，当有消息来临的时候全部读完，有消息需要写的话需要全部写完，对于每一个文件描述符需要一个Channel去处理IO事件，因此本项目中的所有文件描述符都会与一个Channel关联，每个文件描述符会设置Channel中的handle函数，通过这样的形式完成对一个文件描述符的IO，在整体上使用Reactor模式，整个程序拥有一个MainReactor，当有client来临的时候通过Round Robin的方法（在我看来像是轮流分配）分配一个subReactor去处理新的连接
+
+
+## 各个文件实现及描述
+
+### Util.h & Util.cpp
+这里面包含的读写函数是为了适应整个服务器在ET模式下读取文件描述符，读到不能在读（EAGAIN），写到不能在写（EAGAIN）的情况，同时包含了对文件描述符设置的一些函数，主要属性包括非阻塞、对SIGPIPE（对端关闭，本端收到的信号）的处理，TCP中Nodelay算法的禁用，TCP中LINGER的设置
+
+这里讲一下**linger属性**：我们知道在TCP断开连接的时候需要经历四次握手，在TIME_WAIT状态下等待时间时长为linger time，在`struct linger linger_;`这里面我们需要知道两个属性`l_onoff`和`l_linger`
+
+1. 如果l_onoff=0的话那么主动关闭的一方不会等待进行四次握手，丢弃缓存数据直接发送RST包，并结束自己的连接
+2. 如果l_onoff=1的话是需要进行四次握手的，那么既然需要四次握手就需要TIME_WAIT状态，那么TIME_WAIT等多久就会由l_linger来决定，如果l_linger=0的话那么就会按照默认的时间2MSL来进行，否则将会使用l_linger时间来作为等待的时间，等待的过程中这个连接的状态依然为TIME_WAIT
+
+### Channel.h & Channel.cpp 
+Channel 文件主要实现了Channel类，任务为读写一个文件描述符，以及对数据进行URI，Header的拆分并分析。
+
+这里主要说明handleEvents：
+- （EPOLLHUP && !EPOLLIN）：认为对端关闭
+- （EPOLLERR）：文件描述符错误
+- （EPOLLIN | EPOLLRDHUP | EPOLLPRI）：文件描述符有数据可以读，分别为普通数据，带外数据，对端关闭
+- （EPOLLOUT）：有数据需要写入文件描述符
+
+**注意**：
+1. 带外数据：使用与普通数据不同的通道独立传送给用户，是相连的每一对流套接口间一个逻辑上独立的传输通道，通常TCP的URG紧急指针置位来完成。
+2. 整个类的模式为，通过handleEvents来先处理读写时间，然后对连接进行处理，该项目中每个含有读写事件的文件描述符都会关联一个Channel，而Channel中的holder也保存了他的持有者
+
+### Timer.h & Timer.cpp
+
+Timer 文件实现了 TimerNode 超时节点类以及 TimerManager 超时节点管理类，每一个Node携带超时时间点，以及RequestData，Manager使用优先队列维护所有的Node，当Node的超时时间点越小就会再优先队列的头部。
+
+Manager 因为是优先队列结构，所以不支持随机访问，如果有节点 delete 的时候并不会直接delete，最迟会在他的删除时间点因为超时删除，这样做的好处是不需要遍历队列去删除，以及如果相应的Request Data再次来临的时候不需要重新申请Node
+
+### Epoll.h & Epoll.cpp
+
+Epoll 文件实现了单一的 Epoll 类，封装了对Epoll的基本del，mod，add方法，同时通过 poll 来收集事件到 events，将events传送到Channel中的Revents，然后交给Channel处理，该Epoll的基本单位是Channel，并且拥有一个超时管理器，Epoll类主要实现了反应堆服务器模型的基本操作以及对应事件的处理方式。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
